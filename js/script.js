@@ -28,6 +28,8 @@ const getRandomMagic8BallImg = () => {
     return `img/magic8ball_${number}.png`;
 }
 
+const answers = document.querySelector('.answers')
+
 askButton.addEventListener("click", function() {
     if (inputQuestion.value.length < 1) {
       alert('Enter a question!');
