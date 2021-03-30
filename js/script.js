@@ -14,7 +14,7 @@ const askButton = document.createElement('button');
 document.body.appendChild(form);
 form.appendChild(labelQuestion);
 form.appendChild(inputQuestion);
-form.appendChild(askButton);
+document.body.appendChild(askButton);
 
 // Inner HTML
 labelQuestion.innerHTML = 'Ask anything of the mighty Magic8Ball!';
@@ -28,7 +28,7 @@ const getRandomMagic8BallImg = () => {
     return `img/magic8ball_${number}.png`;
 }
 
-const answers = document.querySelector('.answers')
+const answers = document.querySelector('.answers');
 
 askButton.addEventListener("click", function() {
     if (inputQuestion.value.length < 1) {
