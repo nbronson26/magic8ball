@@ -22,9 +22,24 @@ askButton.innerHTML = 'ASK!';
 
 //ask function that when clicked, will choose a random
 //8ball image and insert it into 'answers' div
-form.addEventListener('clicked', function(event){
-    event.preventDefault();
-    if
-})
+
+const getRandomMagic8BallImg = () => {
+    let number = getRandomNumberInRange(1, 10);
+    return `img/magic8ball_${number}.png`;
+}
+
+askButton.addEventListener("click", function() {
+    if (inputQuestion.value.length < 1) {
+      alert('Enter a question!');
+    } else {
+      answers.innerText = "";
+      var num = Math.floor(Math.random() * Math.floor(answers.length));
+      answers.innerText = getRandomMagic8BallImg[num];
+    }
+  });
+
+
+
+
 
 
