@@ -1,11 +1,12 @@
 //data
-let selecteItem = null;
+// let selecteItem = null;
 
 //create an input field for users to ask a question
 const form = document.createElement('form');
 const inputQuestion = document.createElement('input');
 const labelQuestion = document.createElement('label');
 const askButton = document.createElement('button');
+
 
 // Change Type
 //askButton.type = 'submit';
@@ -29,14 +30,33 @@ const getRandomMagic8BallImg = () => {
 }
 
 const answers = document.querySelector('.answers');
+const answerOptions = ["It is certain", 
+"It is decidedly so", 
+"Without a doubt", 
+"Yes - definitely",
+"You may rely on it", 
+"As I see it, yes", 
+"Most likely", 
+"Outlook good", 
+"Yes", "Signs point to yes",
+"Don't count on it", 
+"My reply is no",
+"My sources say no", 
+"Outlook not so good",
+"Very doubtful", 
+"Reply hazy, try again", 
+"Ask again later", 
+"Better not tell you now",
+"Cannot predict now", 
+"Concentrate and ask again"];
 
 askButton.addEventListener("click", function() {
     if (inputQuestion.value.length < 1) {
       alert('Enter a question!');
     } else {
       answers.innerText = "";
-      var num = Math.floor(Math.random() * Math.floor(answers.length));
-      answers.innerText = getRandomMagic8BallImg[num];
+      var num = Math.floor(Math.random() * Math.floor(answerOptions.length));
+      answers.innerText = answerOptions[num];
     }
   });
 
